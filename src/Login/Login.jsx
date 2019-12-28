@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom'
+import './Login.css';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -6,24 +8,22 @@ export default class Login extends React.Component {
     this.state = { name: "" };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleNavigation = this.handleNavigation.bind(this);
   }
   render() {
     return (
-      <div>
+      <div className="login-container">
         <p>Login to join the 100 Beer Draft!</p>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input
-              style={{marginLeft: 10, marginRight: 10}}
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+        <label>
+          Name:
+          <input
+            style={{marginLeft: 10, marginRight: 10}}
+            type="text"
+            value={this.state.name}
+            onChange={this.handleChange}
+          />
+        </label>
+        <Link style={{marginTop: 10}} className="btn center" to={this.handleNavigation}>Enter</Link>
       </div>
     );
   }
@@ -33,7 +33,8 @@ export default class Login extends React.Component {
     console.log(event.target.value);
   }
 
-  handleSubmit() {
-      // Navigate to the draft room
+  handleNavigation(currentLocation) {
+      // Return URL for draft room
+      return 'room/1/' + this.state.name;
   }
 }
