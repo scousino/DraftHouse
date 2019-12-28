@@ -1,0 +1,17 @@
+.btn {
+    background: darkcyan;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+.center {
+    align-self: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
