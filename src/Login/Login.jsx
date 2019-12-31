@@ -30,7 +30,6 @@ export default class Login extends React.Component {
 
   handleChange(event) {
     this.setState({name: event.target.value});
-    console.log(event.target.value);
   }
 
   handleNavigation(currentLocation) {

@@ -1,0 +1,20 @@
+.beer-name.middle {
+    display: inline-block;
+    width: auto;
+    line-height: 36px !important;
+}
+
+.selected-list {
+    width: 200px;
+    border-left: 1px solid black;
+}
+
+.selected-list-close {
+    float: right;
+    transition: opacity 0.2s, color 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+.selected-list-close:hover {
+    transform: scale(1.5);
+}
